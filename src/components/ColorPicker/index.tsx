@@ -19,11 +19,11 @@ export default function ColorPicker({ value, onChange }: ColorPickerProps) {
 	}
 
 	return (
-		<div ref={clickAwayRef} className={style.colorPicker}>
+		<div className={style.colorPicker}>
 			<ColorItem color={value} onClick={() => setMenuOpen(true)} />
 
 			{menuOpen && (
-				<div className={style.menu}>
+				<div ref={clickAwayRef} className={style.menu}>
 					{colors.map((color) => (
 						<ColorItem data-selected={color === value} onClick={() => onSelect(color)} color={color} key={color} />
 					))}
