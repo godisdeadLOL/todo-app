@@ -1,0 +1,92 @@
+{
+	"todos": [
+		{
+			"id": "todo",
+			"title": "Сделать",
+			"todos": [
+				{
+					"id": "task1",
+					"title": "Настроить проект",
+					"content": "Создать структуру проекта и инициализировать Git репозиторий",
+					"createdAt": "2025-07-27T12:30:00.000Z",
+					"steps": [
+						{ "id": "s1", "content": "Создать папку проекта", "checked": false },
+						{ "id": "s2", "content": "Инициализировать npm", "checked": false },
+						{ "id": "s3", "content": "Настроить Git репозиторий", "checked": false }
+					],
+					"tagIds": ["tag1", "tag2"]
+				},
+				{
+					"id": "task2",
+					"title": "Сверстать главную страницу",
+					"content": "Сделать адаптивную верстку для desktop и mobile",
+					"createdAt": "2025-07-27T12:31:00.000Z",
+					"steps": [
+						{ "id": "s4", "content": "Подключить Tailwind CSS", "checked": false },
+						{ "id": "s5", "content": "Создать layout", "checked": false },
+						{ "id": "s6", "content": "Настроить адаптивность", "checked": false }
+					],
+					"tagIds": ["tag2", "tag3"]
+				}
+			],
+			"color": "blue"
+		},
+		{
+			"id": "progress",
+			"title": "В процессе",
+			"todos": [
+				{
+					"id": "task3",
+					"title": "Настроить роутинг",
+					"content": "Добавить маршруты для страниц и навигацию",
+					"createdAt": "2025-07-27T12:32:00.000Z",
+					"steps": [
+						{ "id": "s7", "content": "Установить React Router", "checked": true },
+						{ "id": "s8", "content": "Создать маршруты для страниц", "checked": true },
+						{ "id": "s9", "content": "Сделать навигационное меню", "checked": false }
+					],
+					"tagIds": ["tag1", "tag4"]
+				}
+			],
+			"color": "yellow"
+		},
+		{
+			"id": "completed",
+			"title": "Завершены",
+			"todos": [
+				{
+					"id": "task4",
+					"title": "Настроить ESLint и Prettier",
+					"content": "Автоматизировать проверку кода и форматирование",
+					"createdAt": "2025-07-27T12:33:00.000Z",
+					"steps": [
+						{ "id": "s10", "content": "Установить ESLint и плагины", "checked": true },
+						{ "id": "s11", "content": "Настроить Prettier", "checked": true },
+						{ "id": "s12", "content": "Добавить скрипты в package.json", "checked": true }
+					],
+					"tagIds": ["tag1", "tag5"]
+				},
+				{
+					"id": "task5",
+					"title": "Создать компонент Header",
+					"content": "Сделать верхнюю панель с логотипом и меню",
+					"createdAt": "2025-07-27T12:34:00.000Z",
+					"steps": [
+						{ "id": "s13", "content": "Создать компонент Header.jsx", "checked": true },
+						{ "id": "s14", "content": "Добавить логотип и навигацию", "checked": true },
+						{ "id": "s15", "content": "Стилизация с помощью Tailwind", "checked": true }
+					],
+					"tagIds": ["tag2", "tag3"]
+				}
+			],
+			"color": "green"
+		}
+	],
+	"tags": [
+		{ "id": "tag1", "content": "Настройка проекта", "color": "blue" },
+		{ "id": "tag2", "content": "Верстка", "color": "green" },
+		{ "id": "tag3", "content": "UI", "color": "purple" },
+		{ "id": "tag4", "content": "Роутинг", "color": "yellow" },
+		{ "id": "tag5", "content": "Код-стайл", "color": "red" }
+	]
+}
