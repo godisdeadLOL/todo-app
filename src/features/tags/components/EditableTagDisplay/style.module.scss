@@ -1,0 +1,27 @@
+.editableTagDisplay {
+	@include flex-stack(row, $spacing-1);
+	@include push-to-right(2);
+
+	@include padding-x($spacing-2);
+	@include padding-y($spacing-1);
+
+	background-color: $background-elevated-2;
+	border-radius: $border-radius-1;
+
+	// @include border;
+	// border-color: transparent;
+
+	box-sizing: border-box;
+
+	&[data-selected="true"] {
+		// background-color: $background-elevated-1;
+		// border-color: $border;
+	}
+}
+
+.contentField {
+	flex-grow: 1;
+	background-color: inherit;
+
+	font-size: small;
+}

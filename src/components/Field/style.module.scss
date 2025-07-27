@@ -1,0 +1,84 @@
+.fieldWrapper {
+	--padding-x: #{$spacing-2};
+	--padding-y: #{$spacing-2};
+
+	position: relative;
+	background-color: $background-elevated-1;
+
+	.field,
+	.label {
+		font-size: inherit;
+		line-height: inherit;
+		font-family: inherit;
+	}
+	.field {
+		color: inherit;
+		font-weight: inherit;
+		text-decoration: inherit;
+	}
+
+	.field {
+		box-sizing: border-box;
+		width: 100%;
+		overflow-y: hidden;
+
+		@include border;
+
+		@include padding-x(var(--padding-x));
+		@include padding-y(var(--padding-y));
+
+		background-color: inherit;
+
+		&:focus {
+			color: $text-primary;
+		}
+	}
+
+	.label {
+		pointer-events: none;
+		user-select: none;
+
+		position: absolute;
+		left: calc(var(--padding-x) + 1px);
+		top: calc(var(--padding-y) + 1px);
+
+		font-weight: normal;
+		color: $text-secondary;
+
+		@include padding-x(var(--padding-x));
+		@include margin-x(calc(var(--padding-x) * -1));
+	}
+
+	// floating label
+	.label {
+		transition: transform 0.2s;
+
+		background-color: inherit;
+		transform: translate(0, calc(var(--padding-y) * -1 - 50%)) scale(0.7);
+	}
+	.field:placeholder-shown + .label {
+		transform: none;
+		background-color: transparent;
+	}
+}
+
+.fieldWrapper.small {
+	--padding-x: #{$spacing-2};
+	--padding-y: #{$spacing-1};
+}
+
+.fieldWrapper.plainable {
+	.field:focus::placeholder {
+		color: transparent;
+	}
+
+	.field:not(:focus) {
+		&:not(:hover) {
+			border-color: transparent;
+		}
+
+		~ .label {
+			display: none;
+		}
+	}
+}

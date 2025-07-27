@@ -1,0 +1,100 @@
+@mixin padding-x($value) {
+	padding-left: $value;
+	padding-right: $value;
+}
+
+@mixin padding-y($value) {
+	padding-top: $value;
+	padding-bottom: $value;
+}
+
+@mixin margin-x($value) {
+	margin-left: $value;
+	margin-right: $value;
+}
+
+@mixin margin-y($value) {
+	margin-top: $value;
+	margin-bottom: $value;
+}
+
+@mixin gap($value) {
+	column-gap: $value;
+	row-gap: $value;
+}
+
+@mixin size($value) {
+	width: $value;
+	height: $value;
+}
+
+@mixin flex-stack($direction: row, $gap: $spacing-2) {
+	display: flex;
+	flex-direction: $direction;
+
+	gap: $gap;
+
+	@if $direction == "row" {
+		align-items: center;
+	}
+}
+@mixin flex-center($direction: row, $gap: $spacing-2) {
+	display: flex;
+	flex-direction: $direction;
+
+	gap: $gap;
+
+	align-items: safe center;
+	justify-content: safe center;
+}
+
+@mixin push-to-right($n: 1) {
+	& > :nth-last-child(#{$n}) {
+		margin-left: auto;
+	}
+}
+
+@mixin border($radius: $border-radius-1) {
+	border-radius: $border-radius-1;
+	border-color: $border;
+	border-width: 1px;
+	border-style: solid;
+}
+
+@mixin button {
+	position: relative;
+
+	&::after {
+		content: "";
+		pointer-events: none;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+
+		@include size(100%);
+		border-radius: inherit;
+
+		background-color: $oc-gray-9;
+		opacity: 0%;
+	}
+
+	cursor: pointer;
+
+	&:hover::after {
+		opacity: 8%;
+	}
+
+	&:active::after {
+		opacity: 16%;
+	}
+
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 50%;
+
+		&::after {
+			opacity: 0%;
+		}
+	}
+}

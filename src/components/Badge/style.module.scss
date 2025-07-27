@@ -1,0 +1,45 @@
+$color-values: (
+	"neutral": (
+		$background-elevated-2,
+		$text-secondary,
+	),
+	"red": (
+		$oc-red-1,
+		$oc-red-9,
+	),
+	"green": (
+		$oc-green-1,
+		$oc-green-9,
+	),
+	"blue": (
+		$oc-blue-1,
+		$oc-blue-9,
+	),
+	"yellow": (
+		$oc-yellow-1,
+		$oc-yellow-9,
+	),
+	"purple": (
+		$oc-pink-1,
+		$oc-pink-9,
+	),
+);
+
+.badge {
+	@include flex-center(row, $spacing-1);
+
+	width: fit-content;
+	font-size: small;
+
+	border-radius: $border-radius-1;
+
+	@include padding-x($spacing-2);
+	@include padding-y($spacing-1);
+
+	@each $name, $colors in $color-values {
+		&:global(.#{$name}) {
+			background-color: nth($colors, 1);
+			color: nth($colors, 2);
+		}
+	}
+}

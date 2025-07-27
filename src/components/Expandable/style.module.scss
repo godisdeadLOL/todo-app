@@ -1,0 +1,14 @@
+.expandable {
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: 0.25s grid-template-rows ease;
+
+	&[data-expanded="true"] {
+		grid-template-rows: 1fr;
+	}
+	
+	overflow: hidden;
+	& > div {
+		overflow: hidden;
+	}
+}

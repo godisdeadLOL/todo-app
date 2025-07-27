@@ -1,0 +1,40 @@
+.todoGroupDisplay {
+	& > div:last-child > div {
+		padding-top: $spacing-4;
+		padding-bottom: 64px;
+	}
+
+	// display: flex;
+	// flex-direction: column;
+	// & > :last-child {
+	// 	flex: 1;
+	// }
+}
+
+.headerBlock {
+	@include border;
+	border-radius: $border-radius-2;
+
+	@include padding-x($spacing-3);
+	@include padding-y($spacing-2);
+
+	@include flex-stack;
+
+	background-color: $background-elevated-1;
+
+	h2 {
+		color: $text-primary;
+		
+		font-size: large;
+		font-weight: bold;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		text-wrap: nowrap;
+	}
+
+	@include push-to-right(1);
+}
+
+.counter {
+	@include padding-x($spacing-2);
+}

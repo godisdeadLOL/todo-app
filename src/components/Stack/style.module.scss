@@ -1,0 +1,9 @@
+.stack {
+	&:global(.vertical) {
+		@include flex-stack(column);
+	}
+
+	&:global(.horizontal) {
+		@include flex-stack;
+	}
+}

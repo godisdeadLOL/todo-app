@@ -1,0 +1,10 @@
+.buttonsBlock {
+    margin-top: $spacing-6;
+
+    @include flex-stack;
+    justify-content: end;
+
+    > * {
+        width: auto;
+    }
+}

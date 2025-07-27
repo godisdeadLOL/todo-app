@@ -1,0 +1,15 @@
+.iconButton {
+	@include flex-center;
+
+	align-self: center;
+
+	padding: calc($spacing-1 + 2px);
+	border-radius: 100%;
+
+	color: inherit; //$text-secondary;
+	@include button;
+
+	svg {
+		@include size(18px);
+	}
+}

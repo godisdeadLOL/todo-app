@@ -1,0 +1,24 @@
+<header class="header">
+	<h1>todo-app</h1>
+	<p>kanban edition</p>
+</header>
+
+<style lang="scss">
+	.header {
+		padding-top: $spacing-2;
+		padding-bottom: $spacing-3;
+
+		@include padding-x($spacing-2);
+
+		h1 {
+			font-size: x-large;
+			color: $text-primary;
+			font-weight: bold;
+		}
+
+        display: none;
+		@media (min-width: $breakpoint) {
+			display: block;
+		}
+	}
+</style>

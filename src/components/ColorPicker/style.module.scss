@@ -1,0 +1,43 @@
+$colors: (
+	"neutral": $oc-gray-5,
+	"red": $oc-red-5,
+	"green": $oc-green-5,
+	"blue": $oc-blue-5,
+	"yellow": $oc-yellow-5,
+	"purple": $oc-pink-5,
+);
+
+.colorItem {
+	@include size(1.5rem);
+	border-radius: $border-radius-1;
+	@include button;
+
+	@each $name, $color in $colors {
+		&:global(.#{$name}) {
+			background-color: $color;
+		}
+	}
+}
+
+.colorPicker {
+	position: relative;
+	width: fit-content;
+
+	@include flex-center;
+}
+
+.menu {
+	position: absolute;
+	z-index: 100;
+
+	background-color: $background-elevated-1;
+	@include border;
+	padding: $spacing-2;
+
+	top: 0;
+	left: calc(100% + $spacing-2);
+
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: $spacing-2;
+}

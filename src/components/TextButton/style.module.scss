@@ -1,0 +1,14 @@
+.textButton {
+	@include flex-center;
+
+	padding: 1px;
+
+	cursor: pointer;
+
+	color: inherit;
+	font-size: inherit;
+
+	&:hover {
+		filter: brightness(50%);
+	}
+}

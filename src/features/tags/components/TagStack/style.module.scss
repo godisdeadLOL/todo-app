@@ -1,0 +1,11 @@
+.tagStack {
+	display: flex;
+	align-items: stretch;
+	flex-wrap: wrap;
+	gap: $spacing-2;
+}
+
+.tagsEditButton {
+	padding: 0.4rem !important;
+	@include button;
+}

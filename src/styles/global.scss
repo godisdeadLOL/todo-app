@@ -1,0 +1,52 @@
+body {
+	font-family: $font-main;
+	color: $text-secondary;
+
+	font-size: medium;
+
+	background-color: $background;
+	padding: 0;
+	margin: 0;
+
+	@media (min-width: $breakpoint) {
+		@include padding-x($spacing-4);
+	}
+}
+
+h1,
+h2 {
+	margin: 0;
+	padding: 0;
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+textarea,
+input {
+	border: none;
+	overflow: auto;
+	outline: none;
+	box-shadow: none;
+	resize: none;
+	margin: 0;
+	padding: 0;
+	display: block;
+
+	font-family: $font-main;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+
+	font-size: inherit;
+	color: inherit;
+
+	margin: 0;
+	padding: 0;
+}

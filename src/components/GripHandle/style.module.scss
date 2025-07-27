@@ -1,0 +1,16 @@
+.gripHandle {
+	@include flex-center;
+
+	padding: calc($spacing-1 + 2px);
+	border-radius: 100%;
+
+	color: inherit;
+	
+	cursor: grab;
+	user-select: none;
+	touch-action: none;
+
+	svg {
+		@include size(18px);
+	}
+}

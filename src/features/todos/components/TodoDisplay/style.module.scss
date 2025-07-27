@@ -1,0 +1,42 @@
+.card {
+	background-color: $background-elevated-1;
+
+	@include padding-y($spacing-5);
+	@include padding-x($spacing-4);
+
+	@include border();
+	border-radius: $border-radius-2;
+
+	.headerBlock {
+		@include flex-stack;
+		@include push-to-right(2);
+	}
+
+	.detailsBlock {
+		padding-top: $spacing-5;
+		// padding-bottom: $spacing-5;
+
+		.todoStepsBlock {
+			margin-top: $spacing-5;
+
+			& > button:last-child {
+				margin-top: $spacing-4;
+			}
+		}
+	}
+
+	.tagsBlock {
+		margin-top: $spacing-4;
+	}
+
+	&[data-dragged="true"] {
+		opacity: 0.5;
+	}
+}
+
+.titleField {
+	flex-grow: 1;
+
+	color: $text-primary;
+	font-weight: bold;
+}

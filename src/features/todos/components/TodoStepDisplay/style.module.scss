@@ -1,0 +1,21 @@
+.todoStepDisplay {
+	@include flex-stack(row, $spacing-3);
+
+	@include padding-y($spacing-2);
+	@include padding-x($spacing-3);
+
+	background-color: $background-elevated-2;
+	border-radius: $border-radius-2;
+
+	@include push-to-right();
+}
+
+.contentField {
+	flex-grow: 1;
+	font-size: small;
+	background-color: $background-elevated-2 !important;
+}
+
+.completed {
+	text-decoration: line-through;
+}

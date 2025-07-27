@@ -1,0 +1,25 @@
+.tagsBlock {
+	margin-top: $spacing-6;
+	@include flex-stack(column, 0);
+
+	min-height: 256px;
+	& > :nth-last-child(1) {
+		margin-top: auto;
+	}
+}
+
+.tagsStack {
+	flex: 1;
+	@include margin-y($spacing-4);
+}
+
+.tagsEditListFallback {
+	@include flex-center(column);
+	@include padding-y($spacing-6);
+
+	flex: 1;
+
+	svg {
+		@include size(24px);
+	}
+}
