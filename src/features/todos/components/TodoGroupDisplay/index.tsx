@@ -27,7 +27,7 @@ export default function TodoGroupDisplay() {
 	const isEmpty = groupData.todos.length === 0
 
 	return (
-		<div className={style.todoGroupDisplay} ref={setNodeRef}>
+		<div data-length-value={groupData.todos.length} className={style.todoGroupDisplay} ref={setNodeRef}>
 			<div className={style.headerBlock}>
 				<ToggleButton disabled={isEmpty} toogled={expanded} onClick={() => setExpanded((value) => !value)} elementOff={<LuChevronDown />} elementOn={<LuChevronUp />} />
 
